@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.outer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9%;
+    padding: 50px;
+    background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%))
+}
+
+.upper{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid hsl(217, 16%, 45%);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logo img{
+    width: 50%;
+}
+
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+
+}
+
+.score h6{
+    color: hsl(229, 64%, 46%) ;
+    letter-spacing: 0.05em;
+}
+
+.score span{
+    color: hsl(229, 25%, 31%);
+
+}
+
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-image: url(./images/bg-triangle.svg);
+    
+    background-size: 85% 85%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.m-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.m-up button, .m-dn button{
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.yellow {
+    border: 10px solid hsl(39, 89%, 49%);
+    box-shadow: 0px 5px hsl(30, 83%, 45%) , 0px 4px hsl(0, 1%, 77%) inset;
+}
+.blue{
+    border: 10px solid hsl(230, 89%, 62%);
+    box-shadow: 0px 5px hsl(221, 68%, 41%), 0px 4px hsl(0, 1%, 77%) inset  ;
+
+}
+
+.red{
+    border: 10px solid  hsl(349, 70%, 56%);
+    box-shadow: 0px 5px hsl(349, 71%, 52%), 0px 4px hsl(0, 1%, 77%) inset  ;
+
+}
+
+.lower-lower button{
+    color: white;
+    background-color: transparent ;
+    padding: 10px 50px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+.middle2{
+    display: none;
+}
+
+.result{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result h1{
+    color: white;
+}
+.result button{
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: hsl(217, 16%, 45%);
+    border: none;
+    border-radius: 5px;
+}
+
+.rules{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around   ;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white; 
+    padding: 50px;
+    background-image: url(./images/image-rules.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.rules h1{
+    color:hsl(214, 47%, 23%) ;
+}
+.rules button{
+    border: none;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 775px) {
+    .outer{
+        justify-content: center;
+        padding: 50px 300px;
+    }
+    .middle{
+        background-size: auto auto;
+
+    }
+
+    .upper, .middle, .middle2, .result, .rules, .lower-lower{
+        width: 100%;
+    }
+    .m-up button, .m-dn button{
+        width: 10.5rem;
+        height: 10.5rem;
+    }
+ 
+    .m-up{
+        gap: 7.5rem;
+        
+    }
+    .logo img{
+        width: 100%;
+    }
+    .yellow {
+        border: 20px solid hsl(39, 89%, 49%);
+        box-shadow: 0px 8px hsl(30, 83%, 45%) , 0px 8px hsl(0, 1%, 77%) inset;
+    }
+    .blue{
+        border: 20px solid hsl(230, 89%, 62%);
+        box-shadow: 0px 8px hsl(221, 68%, 41%), 0px 8px hsl(0, 1%, 77%) inset  ;
+    
+    }
+    
+    .red{
+        border: 20px solid  hsl(349, 70%, 56%);
+        box-shadow: 0px 8px hsl(349, 71%, 52%), 0px 8px hsl(0, 1%, 77%) inset  ;
+    
+    }
+
+    .lower-lower{
+        display: flex;
+        justify-content: end;
+    }
+    .rules{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around   ;
+        align-items: center;
+        width: 25vw;
+        height: 60vh;
+        background-color: white; 
+        padding: 50px;
+        border-radius: 5px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
